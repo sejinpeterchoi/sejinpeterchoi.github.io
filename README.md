@@ -1,1 +1,0 @@
-# sejinpeterchoi.github.io
