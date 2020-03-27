@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -18,21 +18,66 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+# General settings
+title: Sejin Choi
+title_html: "<b></b>Sejin<b><span class=\"invisible\"> </span>Choi</b>"
+logo: "https://github.com/sejinpeterchoi.png"
+description:
+  fr: Sejin Choi is a public health doctor, mostly working on
+  en: Sejin Choi is a public health doctor, mostly working on ...
+baseurl: ""
+url: ""
+
+langs: ["fr", "en"]
+defaults:
+  - scope:
+      path: ""
+    values:
+      lang: "fr"
+
+# Author
+author: Sejin Choi
+email: sj.peter.choi@gmail.com
+twitter_username: SejinPeterChoi
+github_username: sejinpeterchoi
+author_display: false
+author_website: https://sejinpeterchoi.github.io
+curriculum:
+    url: assets/CV_SEJIN CHOI_2.2.pdf
+
+# Nav menu
+nav_ext_links:
+
+  - name: Writings
+    url:
+      fr: https://brunch.co.kr/@sjpeterchoi
+      en: https://brunch.co.kr/@sjpeterchoi
+
+# Piwik
+piwik:
+  url: batcloud.me/piwik
+  site_id: 2
+
+# Favicon
+favicon:
+  safari: 5bbad5
+  theme: ffffff
 
 # Build settings
-theme: minima
-plugins:
+markdown: kramdown
+redcarpet:
+  extensions: ["tables", "fenced_code_blocks", "autolink", "footnotes", "with_toc_data"]
+theme: academic
+gems:
   - jekyll-feed
+  - jekyll-assets
+
+exclude:
+  - jekyll_build.sh
+  - Gemfile
+  - Gemfile.lock
+
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
